@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style  type="text/css">
+        .sign_up_button {
+            width: 100%;
+            margin-top: 70px;
+            padding: 9px 18px;
+            font-size: 18px;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            background: #42c02e;
+            cursor: pointer;
+            outline: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<h1>注册账号已存在！</h1>
+<form action="/front/login" name="loginfrom" accept-charset="utf-8" method="post">
+    <input type="submit" class="sign_up_button" name="去登录" value="去登录"/>
+</form>
+<form action="/front/register" name="loginfrom" accept-charset="utf-8" method="post">
+    <input type="submit" class="sign_up_button" name="重新注册" value="重新注册"/>
+</form>
+</body>
+</html>

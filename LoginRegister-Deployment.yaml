@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: loginregister-deployment
+  labels:
+    app: loginregister
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: loginregister
+  template:
+    metadata:
+      labels:
+        app: loginregister
+    spec:
+      containers:
+      - name: loginregister
+        image: master01:5000/loginregister:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        env:
+        - name: MYSQL_SERVICE_HOST
+          value: loginregistermysql
+        - name: MYSQL_SERVICE_PORT
+          value: "3306"
+        - name: MYSQL_ROOT_PASSWORD
+          value: root
+          

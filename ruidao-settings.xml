@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <profiles>
+        <profile>
+            <id>jdk-1.8</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+                <jdk>1.8</jdk>
+            </activation>
+            <properties>
+                <maven.compiler.source>1.8</maven.compiler.source>
+                <maven.compiler.target>1.8</maven.compiler.target>
+                <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+            </properties>
+        </profile>
+        <profile>
+            <id>dj-public</id>
+            <repositories>
+                <repository>
+                    <id>epai</id>
+                    <name>epai repo</name>
+                    <url>http://10.88.107.250/nexus/content/groups/public</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <!--  ALAUDA 增加plugin repository 的配置 -->
+                <pluginRepository>
+                    <id>epai</id>
+                    <name>epai repo</name>
+                    <url>http://10.88.107.250/nexus/content/groups/public</url>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>dj-public</activeProfile>
+        <activeProfile>jdk-1.8</activeProfile>
+    </activeProfiles>
+
+</settings>
