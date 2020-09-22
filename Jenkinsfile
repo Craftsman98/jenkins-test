@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'nihao!!!!!!!'
+                echo '开始。。。'
+
             }
         }
     }
